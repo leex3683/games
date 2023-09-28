@@ -37,7 +37,8 @@ gameData.init(
     },
     image: {
       type: DataTypes.STRING,
-    }
+    },
+
   },
   {
     sequelize,

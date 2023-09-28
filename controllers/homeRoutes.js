@@ -49,6 +49,26 @@ router.get("/games", async (req, res) => {
   }
 });
 
+//view single game with details
+router.get("/games/:id", withAuth, async (req, res) => {
+  try {
+    const gameData = await Game.findAll({
+      include: { all: true, nested: true },
+      where: { id: req.params.id},
+    });
+
+    const game = gameData.map((g) => g.get({ plain: true }));
+
+    res.render("onegame", {
+      game,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {

@@ -1,0 +1,14 @@
+{{#each game as |games|}}
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+  <img  class="card-img-top" src="/images/{{image}}"></img>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{games.title}}</li>
+    <li class="list-group-item">{{games.developer}}</li>
+    <li class="list-group-item">{{games.platform}}</li>
+    <li class="list-group-item">{{games.release_date}}</li>
+    <li class="list-group-item">{{games.genre}}</li>
+  </ul>
+</div>
+{{/each}}

@@ -43,10 +43,7 @@ button {
   text-align: center;
 }
 
-.profile-game-card { 
-  width: 600px; 
-  height: 400px; 
-}
+
 #profileID {
   max-width: 100%;
   max-height: 100%;
@@ -56,6 +53,7 @@ button {
   /* color: red; */
   font-size: 20px;
 }
+
 .game-card {
   background-color: var(--card-bg-color);
 
